@@ -8,3 +8,7 @@
 
   <%= button_to "Destroy this list", @list, method: :delete %>
 </div>
+<% @list.movies.each do |movie| %>
+  <h2><%= movie.title %></h2>
+  <p><%= movie.overview %></p>
+<% end %>
