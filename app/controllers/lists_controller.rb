@@ -8,6 +8,7 @@ class ListsController < ApplicationController
 
   # GET /lists/1 or /lists/1.json
   def show
+
   end
 
   # GET /lists/new
@@ -17,6 +18,7 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
+
   end
 
   # POST /lists or /lists.json
@@ -58,13 +60,14 @@ class ListsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_list
-      @list = List.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def list_params
-      params.require(:list).permit(:name, :movie_id, :bookmark_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_list
+    @list = List.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def list_params
+    params.require(:list).permit(:name, :movie_id, :bookmark_id)
+  end
 end

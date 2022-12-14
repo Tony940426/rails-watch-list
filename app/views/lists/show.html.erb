@@ -1,14 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<h1><%= @list.name %></h1>
 
-<%= render @list %>
-
-<div>
-  <%= link_to "Edit this list", edit_list_path(@list) %> |
-  <%= link_to "Back to lists", lists_path %>
-
-  <%= button_to "Destroy this list", @list, method: :delete %>
-</div>
 <% @list.movies.each do |movie| %>
   <h2><%= movie.title %></h2>
   <p><%= movie.overview %></p>
 <% end %>
+
+<div>
+  <%= link_to "Edit this list", edit_list_path(@list) %> |
+  <%= link_to "Back to lists", lists_path %>
+  <%= button_to "Destroy this list", @list, method: :delete %>
+</div>
