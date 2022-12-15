@@ -1,11 +1,21 @@
+.lists {
+  display: flex;
+}
+
 .list-card {
-width: 100%;
+width: 250px;
+height: 150px;
 padding: 15px;
 box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.2);
 border-radius: 5px;
 background-color: white;
 background-repeat: no-repeat;
-background-size: contain;
+background-size: cover;
+background-position: contain;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
 
   &:hover {
     box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.6);
