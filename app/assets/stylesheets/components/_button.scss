@@ -1,0 +1,7 @@
+.button-list {
+  transition: 0.5s;
+  color: white;
+  &:hover {
+    color: orange;
+  }
+}

@@ -25,7 +25,6 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id])
   end
 
-  # Only allow a list of trusted parameters through.
   def bookmark_params
     params.require(:bookmark).permit(:comment, :movie_id)
   end
