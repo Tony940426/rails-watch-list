@@ -1,15 +1,16 @@
 <div class="home-navbar">
-  <%= link_to "New list", new_list_path, class:"button-list" %>
+<%= link_to "+ New list", new_list_path, class:"button-list" %>
 </div>
 <%= render "banner" %>
 <div class="container">
   <div id="lists">
     <% @lists.each do |list| %>
+      <%= link_to list do %>
         <%= render list %>
         <p>
-          <%= link_to "Show this list", list %>
         </p>
-      </div>
+      <% end %>
+    </div>
     <% end %>
   </div>
 </div>
