@@ -1,0 +1,34 @@
+.show-cards {
+  display: flex;
+  margin: 1.5rem 0px;
+  box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.3);
+
+  img {
+    width: 20%;
+  }
+
+  p {
+    color:gray;
+  }
+
+  a{
+    color: orange;
+  }
+
+  h4 {
+    font-size: medium;
+  }
+
+  .show-card-info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .show-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}

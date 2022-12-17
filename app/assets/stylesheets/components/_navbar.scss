@@ -8,3 +8,18 @@
   justify-content: right;
   align-items: center;
 }
+
+.show-navbar {
+  padding: 25px;
+  width: 100%;
+  border-bottom: 2px solid rgba($color: #000000, $alpha: 0.1);
+  background-color: white;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  a {
+    color: gray;
+    margin: 0px 0.5rem;
+  }
+}
