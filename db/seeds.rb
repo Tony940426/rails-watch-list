@@ -29,7 +29,4 @@ end
 List.create!(name: "Classic")
 List.create!(name: "Action")
 
-Bookmark.create!(comment: 'Classic Movie', movie_id: 1, list_id: 1)
-Bookmark.create!(comment: 'Childhood Favourite', movie_id: 2, list_id: 2)
-
 puts 'Seeds Created'
