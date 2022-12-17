@@ -1,23 +1,31 @@
 .lists {
-  display: flex;
+  width: 900px;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  justify-content: center;
 }
 
 .list-card {
-width: 250px;
-height: 150px;
+width: 350px;
+height: 200px;
 padding: 15px;
 box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.2);
 border-radius: 5px;
 background-color: white;
 background-repeat: no-repeat;
 background-size: cover;
-background-position: contain;
+background-position: center;
 color: white;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 display: flex;
 justify-content: center;
 align-items: center;
+transition: 0.3s;
 
   &:hover {
-    box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.6);
+    box-shadow: 1px 1px 20px rgba($color: #000000, $alpha: 0.6);
+    color: orange;
   }
 }
