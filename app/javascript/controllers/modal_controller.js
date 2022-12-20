@@ -8,7 +8,6 @@ export default class extends Controller {
     })
     this.modal.show()
   }
-
   disconnect() {
     this.modal.hide()
   }
