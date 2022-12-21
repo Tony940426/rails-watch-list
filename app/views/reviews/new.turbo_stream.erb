@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "remote_modal" do %>
+  <%= render partial: "reviews/modal", locals: { list: @list, review: @review }%>
+<% end %>

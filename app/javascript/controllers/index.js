@@ -10,6 +10,9 @@ application.register("hello", HelloController)
 import ModalController from "./modal_controller"
 application.register("modal", ModalController)
 
+import StarRatingController from "./star_rating_controller"
+application.register("star-rating", StarRatingController)
+
 import TurboController from "./turbo_controller"
 application.register("turbo", TurboController)
 

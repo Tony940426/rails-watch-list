@@ -1,13 +1,11 @@
-<div class="home-navbar">
-<%= link_to "+ New list", new_list_path, class:"button-list", "data-controller":"turbo" %>
+<div class="home-navbar col-12">
+  <%= link_to "+ New list", new_list_path, class:"button-list", "data-controller":"turbo" %>
 </div>
 <%= render "banner" %>
-  <div class="lists">
+<div class="lists">
     <% @lists.each do |list| %>
-      <%= link_to list do %>
-        <%= render list %>
+        <%= link_to list do %>
+          <%= render list %>
+        <% end %>
       <% end %>
-      <% end %>
-    </div>
-  </div>
 </div>

@@ -26,4 +26,10 @@
       </div>
     </div>
     <% end %>
+    <h2><%= @list.name %> List Review</h2>
+    <%= link_to "+ Add Review", new_list_review_path(@list), "data-controller":"turbo" %>
+    <% Review.all.each do |x| %>
+      <h4><%= x.content %></h4>
+      <p><%= "⭐" * x.rating%></p>
+    <% end %>
 </div>
