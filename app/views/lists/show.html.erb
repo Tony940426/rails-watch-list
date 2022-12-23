@@ -26,10 +26,16 @@
       </div>
     </div>
     <% end %>
-    <h2><%= @list.name %> List Review</h2>
-    <%= link_to "+ Add Review", new_list_review_path(@list), "data-controller":"turbo" %>
-    <% Review.all.each do |x| %>
-      <h4><%= x.content %></h4>
-      <p><%= "⭐" * x.rating%></p>
-    <% end %>
+    <div class="show-review">
+      <div class="show-review-header">
+        <h2><%= @list.name %> List Reviews</h2>
+        <%= link_to "+ Add Review", new_list_review_path(@list), "data-controller":"turbo", class:"button-review" %>
+      </div>
+      <div class="show-review-content">
+      <% Review.all.each do |x| %>
+        <h4><i class="fa-sharp fa-solid fa-quote-left">&nbsp</i><%= x.content %>&nbsp<i class="fa-sharp fa-solid fa-quote-right"></i></h4> <span><%= x.created_at %></span>
+        <p><%= "⭐" * x.rating%></p>
+      <% end %>
+      </div>
+    </div>
 </div>

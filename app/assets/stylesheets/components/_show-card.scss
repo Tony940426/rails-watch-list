@@ -38,3 +38,18 @@
   }
 
 }
+
+.show-review {
+  box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.3);
+
+  .show-review-header {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgba($color: #1d3878, $alpha: 1.0);
+  }
+
+  .show-review-content {
+    padding: 0.5rem;
+  }
+}

@@ -15,3 +15,13 @@
     color: orange;
   }
 }
+
+.button-review {
+  transition: 0.5s;
+  color: white;
+  margin: 0px 0.5rem;
+
+  &:hover {
+    color: orange;
+  }
+}
