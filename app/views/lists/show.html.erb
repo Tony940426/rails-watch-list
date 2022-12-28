@@ -21,11 +21,14 @@
         <p class="show-overview"><i><%= movie.overview %></i></p>
         <div class="show-card-footer">
           <h4><i class="fa-sharp fa-solid fa-quote-left">&nbsp</i><%= bookmark.comment %>&nbsp<i class="fa-sharp fa-solid fa-quote-right"></i></h4>
-          <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete} %>
+          <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete} do %>
+            <i class="fa-solid fa-dumpster"></i>
+          <% end %>
         </div>
       </div>
     </div>
     <% end %>
+
     <div class="show-review">
       <div class="show-review-header">
         <h2><%= @list.name %> List Reviews</h2>
