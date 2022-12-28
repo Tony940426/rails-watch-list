@@ -32,9 +32,10 @@
         <%= link_to "+ Add Review", new_list_review_path(@list), "data-controller":"turbo", class:"button-review" %>
       </div>
       <div class="show-review-content">
-      <% Review.all.each do |x| %>
-        <h4><i class="fa-sharp fa-solid fa-quote-left">&nbsp</i><%= x.content %>&nbsp<i class="fa-sharp fa-solid fa-quote-right"></i></h4> <span><%= x.created_at %></span>
-        <p><%= "⭐" * x.rating%></p>
+
+      <% @list.reviews.each do |review| %>
+        <h4><i class="fa-sharp fa-solid fa-quote-left">&nbsp</i><%= review.content %>&nbsp<i class="fa-sharp fa-solid fa-quote-right"></i></h4> <span><%= review.created_at %></span>
+        <p><%= "⭐" * review.rating%></p>
       <% end %>
       </div>
     </div>

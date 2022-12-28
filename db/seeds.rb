@@ -28,5 +28,8 @@ end
 
 List.create!(name: "Classic")
 List.create!(name: "Action")
+Review.create!(content: "List could be better", rating: 2, list_id: 1)
+Review.create!(content: "Why was this list created", rating: 1, list_id: 1)
+Review.create!(content: "Fantastic list, great movies", rating: 5, list_id: 2)
 
 puts 'Seeds Created'
