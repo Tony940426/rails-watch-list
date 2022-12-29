@@ -10,17 +10,27 @@
       <% end %>
 </div>
 
-<div class="container">
-  <form id="search-form" class="row">
+<div class="container" data-controller = "search">
+  <%= form_with url: movies_path, method: :get, class: "d-flex", data: {
+    search_target: "form",
+    action: "submit->search#load"
+    } do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+  placeholder: "Find a movie"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+  <%# <form id="search-form" class="row">
     <div class="col-10">
       <input id="search-input" type="text" class="form-control" placeholder="Find movies">
     </div>
     <div class="col-2">
       <input type="submit" class="btn btn-primary" value="Search">
     </div>
-  </form>
-
-    <ul id="results" class="list-inline">
-
-    </ul>
-</div>
+  </form> %>
+      <%# <ul id="results" class="list-inline" data-controller = "search"> %>
