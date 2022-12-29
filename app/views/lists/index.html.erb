@@ -11,12 +11,12 @@
 </div>
 
 <div class="container">
-  <form id="search-form" class="row">
-    <div class="col-10">
-      <input id="search-input" type="text" class="form-control" placeholder="Find movies">
-    </div>
-    <div class="col-2">
-      <input type="submit" class="btn btn-primary" value="Search">
-    </div>
-  </form>
+<%= form_with url: movies_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a movie"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 </div>

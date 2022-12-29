@@ -29,7 +29,7 @@
     </div>
     <% end %>
 
-    <div class="show-review">
+    <div class="show-review" data-aos = "fade-up">
       <div class="show-review-header">
         <h2><%= @list.name %> List Reviews</h2>
         <%= link_to "+ Add Review", new_list_review_path(@list), "data-controller":"turbo", class:"button-review" %>
