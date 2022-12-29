@@ -14,9 +14,15 @@ const insertMovies = (data) => {
     console.log(movie.overview)
     console.log(movie.poster_path)
 
-    const movieTag = `<li>
-    <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="" />
-    <p>${movie.original_title}</p>
+    const movieTag = `
+    <li>
+      <div class = "show-cards">
+        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="" >
+        <div class = "show-card-info">
+          <p>${movie.original_title}</p>
+          <p>${movie.overview}</p>
+        </div>
+      </div>
     </li>`;
     list.insertAdjacentHTML('beforeend', movieTag);
   });
