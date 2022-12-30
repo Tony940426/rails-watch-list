@@ -3,14 +3,18 @@
 
   <h1>Movies</h1>
 
-  <div id="movies">
-    <% @movies.each do |movie| %>
-      <%= render movie %>
-      <p>
-        <%= link_to "Show this movie", movie %>
-      </p>
-    <% end %>
-  </div>
+<div class="container">
 
-  <%= link_to "New movie", new_movie_path %>
+  <form id="search-form" class="row">
+    <div class="col-10">
+      <input id="search-input" type="text" class="form-control" placeholder="Find movies">
+    </div>
+    <div class="col-2">
+      <input type="submit" class="btn btn-primary" value="Search">
+    </div>
+  </form>
+
+  <ul id="results" class="list-inline" data-controller = "search">
+
+  </ul>
 </div>
