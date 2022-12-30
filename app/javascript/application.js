@@ -24,16 +24,12 @@ const fetchMovies = (movie) => {
 const insertMovies = (data) => {
   const movies = data.results
   movies.forEach((movie) => {
-    console.log(movie.original_title)
-    console.log(movie.overview)
-    console.log(movie.poster_path)
-
     const movieTag = `
     <li>
-      <div class = "show-cards">
-        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="" >
-        <div class = "show-card-info">
-          <p>${movie.original_title}</p>
+      <div class = "movie-show-cards">
+        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
+        <div class = "movie-show-card-info">
+          <h4>${movie.original_title}</h4>
           <p>${movie.overview}</p>
         </div>
       </div>

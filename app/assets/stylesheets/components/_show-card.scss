@@ -54,3 +54,26 @@
     padding: 0.5rem;
   }
 }
+
+.movie-show-cards {
+  display: flex;
+  margin: 1.5rem 0px;
+  box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.3);
+
+  img {
+    width: 25%;
+    object-fit: cover;
+  }
+
+  p {
+    font-size: medium;
+  }
+
+  .movie-show-card-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+}
